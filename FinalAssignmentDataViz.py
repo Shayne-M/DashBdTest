@@ -71,8 +71,8 @@ def compute_data_choice_2(df):
 
 
 # Application layout
-app.layout = html.Div[('US Domestic Airline Flights Performance'),
-                    style={'text-align': 'center', 'color': '#503D36', 'fontSize': 24 }],
+app.layout = html.Div[('US Domestic Airline Flights Performance',
+                    style={'text-align': 'center', 'color': '#503D36', 'fontSize': 24 }),
                                 # REVIEW2: Dropdown creation
                                 # Create an outer division 
 html.Div([])
