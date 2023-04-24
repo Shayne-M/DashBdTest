@@ -72,7 +72,7 @@ def compute_data_choice_2(df):
 
 # Application layout
 app.layout = html.Div[('US Domestic Airline Flights Performance',
-                    style={'text-align': 'center', 'color': '#503D36', 'fontSize': 24 }),
+                    style={'textAlign': 'center', 'color': '#503D36', 'font-size': 24 }),
                                 # REVIEW2: Dropdown creation
                                 # Create an outer division 
 html.Div([])
@@ -108,7 +108,7 @@ html.Div([
                                                      # Update dropdown values using list comphrehension
                                                      options=[{'label': i, 'value': i} for i in year_list],
                                                      placeholder="Select a year",
-                                                     style={'width':'80%', 'padding':'3px', 'font-size': '20px', 'text-align-last' : 'center'}),
+                                                     style={'width':'80%', 'padding':'3px', 'font-size': '20px', 'textAlign' : 'center'}),
                                             # Place them next to each other using the division style
                                             ], style={'display': 'flex'}),  
                                           ]),
@@ -124,7 +124,6 @@ html.Div([
                                 
                                 # TASK3: Add a division with two empty divisions inside. See above disvision for example.
                                 # Enter your code below. Make sure you have correct formatting.
-                               html.Div([ ], id='plot1'),
     
                                 html.Div([
                                         html.Div([ ], id='plot4'),
@@ -135,10 +134,11 @@ html.Div([
 # Callback function definition
 # TASK4: Add 5 ouput components
 [Output(component_id='plot1', component_property='children'),
- Output(plot2),
- Output(plot3),
- Output(plot4),
- Output(plot5)]
+ Output(component_id='plot2'), component_property='children'),
+ Output(component_id='plot3'), component_property='children'),
+ Output(component_id='plot4'), component_property='children'),
+ Output(component_id='plot5'), component_propert='children')
+]
 # Enter your code below. Make sure you have correct formatting.
 @app.callback( [],
                [Input(component_id='input-type', component_property='value'),
